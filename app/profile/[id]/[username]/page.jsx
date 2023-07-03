@@ -3,7 +3,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import Profile from '../../../../components/Profile';
 
-const userProfilePage = ( { params }) => {
+const UserProfilePage = ( { params }) => {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
@@ -15,7 +15,7 @@ const userProfilePage = ( { params }) => {
           };
       
           fetchPosts()
-    }, [])
+    }, [params.id])
 
     return (
         <Profile
@@ -26,4 +26,4 @@ const userProfilePage = ( { params }) => {
     )
 }
 
-export default userProfilePage
+export default UserProfilePage
