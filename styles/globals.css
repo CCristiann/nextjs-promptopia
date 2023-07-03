@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* > *,
+*,
+html,
+body {
+  box-sizing: border-box;
+}
+
+:root {
+  --toastify-font-family: "Poppins";
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+}
+
+.main::before {
+  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
+  position: absolute;
+  content: "";
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main::after {
+  content: "";
+  background-image: url("/assets/images/grid.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+.orange_gradient {
+  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+}
+
+.blue_gradient {
+  @apply bg-gradient-to-r from-blue-500 to-cyan-300 bg-clip-text text-transparent;
+}
+
+.black-blue_gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[rgba(13,27,42,1)] to-[rgba(27,38,59,1)] to-[rgba(65,90,119,1)] to-[rgba(119,141,169,1)] ;
+}
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto px-6 lg:px-0;
+}
+
+.hero_text {
+  @apply font-bold text-5xl md:text-6xl text-center text-[#1b263b];
+}
+
+.hero_text > span {
+  @apply orange_gradient;
+}
+
+.description {
+  @apply mt-5 text-base text-[#1b263b] sm:text-xl max-w-2xl;
+}
+
+nav {
+  @apply flex justify-between w-full mb-20 pt-3 top-0;
+}
+
+.logo {
+  @apply flex gap-6 items-center justify-center font-bold text-3xl;
+}
+
+.black_btn {
+  @apply flex justify-center items-center border-2 border-transparent bg-[#1b263b] text-white font-semibold py-2 px-4 rounded-xl
+  duration-300 hover:bg-white hover:text-[#1b263b] hover:border-[#1b263b];
+}
+
+.black_btn_provider {
+  @apply flex justify-center items-center gap-2 text-sm md:text-base border-2 border-transparent bg-[#0d1b2a] text-white font-semibold px-2 py-1 md:px-4 md:py-2 rounded-xl;
+}
+
+.orange_btn {
+  @apply flex justify-center items-center border-2 border-transparent hover:border-orange-600/90 bg-orange-600/90 text-white font-semibold py-2 px-4 rounded-xl
+  duration-300 hover:bg-white hover:text-black;
+}
+
+.dropdown_menu {
+  @apply absolute right-0 mt-3 p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-4 justify-end items-end z-[999] shadow-lg;
+}
+
+.dropdown_menu > a {
+  @apply text-lg font-semibold text-[#0d1b2a];
+}
+
+.form_textarea {
+  @apply w-full flex rounded-lg max-h-[400px] h-[200px] mt-2 p-3 text-sm text-gray-500 outline-0;
+}
+
+.form_input {
+  @apply w-full flex rounded-lg mt-2 p-3 text-sm text-gray-500 outline-0;
+}
+
+.search_input {
+  @apply block w-full rounded-md border border-gray-200 bg-[#1b263b] py-2.5 pl-5 pr-12 text-base text-white shadow-lg font-medium focus:border-black/40 focus:outline-none focus:ring-0 caret-white;
+}
+
+.prompt_layout {
+  @apply space-y-6 py-10 sm:columns-2 sm:gap-6 xl:columns-3;
+}
+
+.prompt {
+  @apply flex flex-col gap-4 flex-1 break-inside-avoid shadow-md rounded-lg border border-gray-300 bg-[#1b263b] bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;
+}
+
+.prompt_header {
+  @apply flex justify-between text-white;
+}
+
+.prompt_body {
+  @apply text-sm text-white;
+}
+
+.prompt_body {
+  word-break: break-all;
+  white-space: normal;
+}
+
+.prompt_footer {
+  @apply text-sm blue_gradient flex flex-col gap-4;
+}
+
+.profile_text {
+  @apply text-5xl md:text-6xl font-bold py-6 black-blue_gradient;
+}
+
+.toast-message {
+  font-family: "Poppins", sans-serif;
+}
+
+footer{
+  @apply bg-[#1b263b] relative z-50
+}
+
+.col{
+  @apply flex flex-col gap-8 max-w-lg w-full
+}
+
+.col > ul > li{
+  @apply flex gap-4 items-center
+}
