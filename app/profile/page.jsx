@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const profilePage = () => {
+const ProfilePage = () => {
   const deleteSuccess = () =>
     toast.success("Prompt deleted successfully!", {
       position: "bottom-right",
@@ -74,4 +74,4 @@ const profilePage = () => {
   );
 };
 
-export default profilePage;
+export default ProfilePage;
