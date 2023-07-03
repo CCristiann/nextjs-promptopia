@@ -15,6 +15,7 @@ const Profile = ({
   const { data: session } = useSession();
   const router = useRouter();
 
+
   return (
     <>
       {session?.user ? (
@@ -47,7 +48,7 @@ const Profile = ({
           <ToastContainer />
         </section>
       ) : (
-        router.push("/")
+        <></>
       )}
     </>
   );
