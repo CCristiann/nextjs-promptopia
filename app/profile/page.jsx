@@ -48,7 +48,7 @@ const ProfilePage = () => {
 
     if (hasConfirmedDelete) {
       try {
-        const res = await fetch(`/api/prompt/${post._id.toString()}`, {
+        await fetch(`/api/prompt/${post._id.toString()}`, {
           method: "DELETE",
         });
 
