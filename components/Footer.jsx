@@ -26,7 +26,7 @@ const Footer = () => {
         <p className='text-base md:text-lg text-white font-normal'>Subscribe to our newsletter to receive exclusive offers, latest news and updates.</p>
         <div className='flex gap-6 w-full'>
           <input type='text' placeholder='Email address' className='rounded-md py-2 pl-4 pr-10 text-base text-black font-medium focus:outline-none focus:ring-0 w-3/4'/>
-          <button type='button' className='orange_btn w-1/4'>Subscribe</button>
+          <button className='orange_btn w-1/4'>Subscribe</button>
         </div>
       </div>
       </div>
