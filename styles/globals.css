@@ -63,7 +63,7 @@ body {
 }
 
 .app {
-  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto px-6 lg:px-0;
+  @apply relative z-10 flex-col max-w-7xl mx-auto px-6 lg:px-0 min-h-screen;
 }
 
 .hero_text {
@@ -79,7 +79,7 @@ body {
 }
 
 nav {
-  @apply flex justify-between w-full mb-20 pt-3 top-0;
+  @apply flex justify-between w-full mb-16 pt-3 top-0;
 }
 
 .logo {
