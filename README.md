@@ -1,5 +1,6 @@
 <div align="center">
     <img src="/public/assets/images/logo.svg">
+    <h1>Promptopia</h1>
 </div>
 
 # About the project
