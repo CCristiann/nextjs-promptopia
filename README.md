@@ -1,4 +1,6 @@
-# ![Promptopia Logo](/public/assets/images/logo.svg) Promptopia
+<div align="center">
+    <img src="/public/assets/images/logo.svg">
+</div>
 
 # About the project
 
