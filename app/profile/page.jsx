@@ -52,7 +52,6 @@ const ProfilePage = () => {
           method: "DELETE",
         });
 
-        console.log("test");
         deleteSuccess();
 
         const filteredPosts = posts.filter((p) => p._id !== post._id);
