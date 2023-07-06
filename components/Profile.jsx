@@ -1,8 +1,9 @@
-import React, { use, useEffect } from "react";
+import React from "react";
 import PromptCard from "./PromptCard";
 import { ToastContainer } from "react-toastify";
 import { useSession } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { redirect } from "next/navigation";
 
 const Profile = ({
   name,
@@ -16,16 +17,15 @@ const Profile = ({
   const { data: session } = useSession();
   const router = useRouter();
 
-  useEffect(() => {
-    if(session?.user.id === userId) {
-      name = "My"
-      desc= "Welcome to your profile page"
-    }
+  if(session?.user.id === userId) {
+    name = "My"
+    desc= "Welcome to your profile page"
+  }
 
-    if(session?.user.id || userId){
-      return(
-        <>
-        <section className="w-full">  
+  if(session?.user.id || userId){
+    return(
+      <>
+      <section className="w-full">  
       <div className="flex flex-col gap-4">
         <h1 className="profile_text">{name} Profile</h1>
         <p className="description">{desc}</p>
@@ -53,13 +53,12 @@ const Profile = ({
 
       <ToastContainer />
 
-      </section>
-        </>
-     )
-    }else{
-      router.push('/')
-    }
-  }, [router])
+    </section>
+      </>
+    )
+  }else{
+    redirect('/')
+  }
   
 };
 
