@@ -22,6 +22,7 @@ const UserProfilePage = ( { params }) => {
         name={`${params.username}'s`}
         desc={`Welcome to ${params.username} profile page`}
         posts={posts}
+        userId={params.id}
         />
     )
 }
