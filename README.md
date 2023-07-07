@@ -13,4 +13,5 @@ Promptopia is s an open-source AI prompting tool for modern world to discover, c
 **Build with:** \
 » Next JS \
 » React JS \
+» MongoDB \
 » Tailwindcss
