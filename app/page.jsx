@@ -1,9 +1,9 @@
+'use client'
 import React from "react";
 
 import Feed from "../components/Feed";
 
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import Loader from '../components/Loader'
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
       </p>
 
       <Feed />
-      <ToastContainer />
+      <Loader />
     </section>
   );
 }

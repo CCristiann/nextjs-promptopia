@@ -10,6 +10,8 @@ const PromptsList = ({ data, handleTagClick, searchValue }) => {
       post.tag.toLowerCase().includes(searchValue)
   )
 
+  if(searchResults.length === 0) return null
+
   return (
     <>
       {searchResults.length > 0 ? (
@@ -25,9 +27,9 @@ const PromptsList = ({ data, handleTagClick, searchValue }) => {
           ))}
         </div>
       ) : (
-        <div className="w-full py-16">
+        <div className="w-full py-16 flex items-center justify-center">
           <h5 className="mt-5 text-gray-900 font-medium text-2xl md:text-3xl max-w-2xl">
-            No prompts found, try changing your search value.
+            No prompts found.
           </h5>
         </div>
       )}

@@ -4,6 +4,8 @@ import { Poppins } from "next/font/google";
 import Provider from "../components/Provider";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,6 +32,7 @@ export default function RootLayout({ children }) {
             <Footer />
           </footer>
         </Provider>
+        <ToastContainer />
       </body>
     </html>
   );
