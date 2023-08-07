@@ -8,7 +8,7 @@ const PromptsList = ({ data, handleTagClick, searchValue }) => {
     (post) =>
       post.creator.username.toLowerCase().includes(searchValue) ||
       post.tag.toLowerCase().includes(searchValue)
-  );
+  )
 
   return (
     <>
@@ -55,8 +55,8 @@ const Feed = () => {
     fetchPosts();
   }, []);
   return (
-    <section className="mt-12 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-6">
-      <form className="relative w-full">
+    <section className="mt-12 mx-auto w-full flex justify-center items-center flex-col gap-6">
+      <form className="relative w-full max-w-xl">
         <input
           type="text"
           placeholder="Search for a tag or a username"

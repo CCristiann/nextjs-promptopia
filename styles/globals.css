@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* > *,
-*,
-html,
-body {
-  box-sizing: border-box;
-}
-
-:root {
-  --toastify-font-family: "Poppins";
-}
-
 .main {
   width: 100%;
   min-height: 100vh;
@@ -21,16 +10,6 @@ body {
   justify-content: center;
   padding: 120px 24px 160px 24px;
   pointer-events: none;
-}
-
-.main::before {
-  background: radial-gradient(circle, rgba(2, 0, 36, 0) 0, #fafafa 100%);
-  position: absolute;
-  content: "";
-  z-index: 3;
-  width: 100%;
-  height: 100%;
-  top: 0;
 }
 
 .main::after {
@@ -121,11 +100,11 @@ nav {
 }
 
 .prompt_layout {
-  @apply space-y-6 py-10 sm:columns-2 sm:gap-6 xl:columns-3;
+  @apply w-full flex flex-wrap gap-5 items-center justify-center my-10
 }
 
 .prompt {
-  @apply flex flex-col gap-4 flex-1 break-inside-avoid shadow-md rounded-lg border border-gray-300 bg-[#1b263b] bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;
+  @apply flex flex-col gap-4 break-inside-avoid shadow-md rounded-lg border bg-[#1b263b] bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;
 }
 
 .prompt_header {

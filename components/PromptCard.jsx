@@ -6,7 +6,6 @@ import { useSession } from 'next-auth/react'
 import { usePathname } from 'next/navigation'
 
 const PromptCard = ({post, handleTagClick, handleDelete, handleEdit}) => {
-
     const { data: session } = useSession()
 
     const pathName = usePathname()
@@ -46,6 +45,7 @@ const PromptCard = ({post, handleTagClick, handleDelete, handleEdit}) => {
             src={copied == post.prompt ? '/assets/icons/tick.svg' : '/assets/icons/copy.svg'}
             width={25}
             height={25}
+            className='cursor-pointer'
             />
         </div>
 
