@@ -8,6 +8,7 @@ import Form from "../../components/Form";
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Loader from "../../components/Loader";
 
 const UpdatePrompt = () => {
   const updateSuccess = () =>
@@ -25,6 +26,7 @@ const UpdatePrompt = () => {
   const searchParams = useSearchParams();
   const promptId = searchParams.get("id");
 
+  const [submitForm, setSubmitForm] = useState(false);
   const [post, setPost] = useState({
     prompt: "",
     tag: "",
@@ -41,9 +43,10 @@ const UpdatePrompt = () => {
       });
     };
 
-    if (promptId) getPromptData();
-  }, [promptId]);
-  const [submitForm, setSubmitForm] = useState(false);
+    getPromptData();
+  }, []);
+
+  if(post.prompt === '' && post.tag === '') return <Loader />
 
   const updatePrompt = async (e) => {
     e.preventDefault();

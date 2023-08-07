@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import PromptCard from "../components/PromptCard";
+import Loader from "./Loader";
 
 const PromptsList = ({ data, handleTagClick, searchValue }) => {
   const searchResults = data.filter(
@@ -10,7 +11,7 @@ const PromptsList = ({ data, handleTagClick, searchValue }) => {
       post.tag.toLowerCase().includes(searchValue)
   )
 
-  if(searchResults.length === 0) return null
+  if(searchResults.length === 0) return <Loader />
 
   return (
     <>

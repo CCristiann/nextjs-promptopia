@@ -9,6 +9,8 @@ import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import Loader from '../../components/Loader'
+
 const ProfilePage = () => {
   const deleteSuccess = () =>
     toast.success("Prompt deleted successfully!", {
@@ -37,7 +39,7 @@ const ProfilePage = () => {
     if (session?.user.id) fetchPosts();
   }, []);
 
-  if(posts.length === 0) return null
+  if(posts.length === 0) return <Loader />
 
   const handleEdit = (post) => {
     router.push(`/update-prompt?id=${post._id}`);

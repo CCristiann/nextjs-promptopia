@@ -19,25 +19,25 @@ const Footer = () => {
             alt="Promptopia Logo"
           />
         </Link>
-        <h1 className='text-4xl md:text-5xl font-bold orange_gradient'>Promptopia</h1>
+        <h1 className='text-3xl md:text-4xl font-bold orange_gradient'>Promptopia</h1>
       </div>
       <div className='flex flex-col gap-6'>
-        <h3 className='text-lg md:text-xl text-white font-semibold'>Subscribe to our Newsletter</h3>
-        <p className='text-base md:text-lg text-white font-normal'>Subscribe to our newsletter to receive exclusive offers, latest news and updates.</p>
+        <h3 className='text-base md:text-lg text-white font-semibold'>Subscribe to our Newsletter</h3>
+        <p className='text-sm md:text-base text-white font-normal'>Subscribe to our newsletter to receive exclusive offers, latest news and updates.</p>
         <div className='flex gap-6 w-full'>
-          <input type='text' placeholder='Email address' className='rounded-md py-2 pl-4 pr-10 text-base text-black font-medium focus:outline-none focus:ring-0 w-3/4'/>
-          <button className='orange_btn w-1/4'>Subscribe</button>
+          <input type='text' placeholder='Email address' className='rounded-md py-2 pl-4 pr-10 text-sm text-black font-medium focus:outline-none focus:ring-0 w-3/4'/>
+          <button className='orange_btn w-1/4 text-sm'>Subscribe</button>
         </div>
       </div>
       </div>
 
       <div className="col">
-        <h5 className='font-semibold text-white text-lg md:text-xl'>Contact information</h5>
+        <h5 className='font-semibold text-white text-base md:text-lg'>Contact information</h5>
       </div>
 
       <div className="col">
-        <h5 className='font-semibold text-white text-lg md:text-xl'>Follow us</h5>
-        <div className='flex gap-4 text-white text-lg md:text-xl'>
+        <h5 className='font-semibold text-white text-base md:text-lg'>Follow us</h5>
+        <div className='flex gap-4 text-white text-base md:text-lg'>
           <BsInstagram />
           <BsTwitter />
           <BsFacebook />

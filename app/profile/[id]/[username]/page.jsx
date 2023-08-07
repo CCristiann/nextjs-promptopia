@@ -2,6 +2,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
 import Profile from '../../../../components/Profile';
+import Loader from '../../../../components/Loader';
 
 const UserProfilePage = ( { params }) => {
     const [posts, setPosts] = useState([])
@@ -17,6 +18,7 @@ const UserProfilePage = ( { params }) => {
           fetchPosts()
     }, [params.id])
 
+    if(posts.length === 0) return <Loader />
     return (
         <Profile
         name={`${params.username}'s`}
