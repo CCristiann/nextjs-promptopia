@@ -3,8 +3,6 @@ import React from "react";
 
 import Feed from "../components/Feed";
 
-import Loader from '../components/Loader'
-
 export default function Home() {
   return (
     <section className="w-full flex flex-col gap-10 justify-center items-center">
@@ -20,7 +18,6 @@ export default function Home() {
       </p>
 
       <Feed />
-      <Loader />
     </section>
   );
 }
